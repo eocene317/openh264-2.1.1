@@ -1,0 +1,52 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "调试解码器",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/h264dec",
+            "args": [
+                "${workspaceFolder}/res/BA_MW_D_P_LOST.264",
+                "${workspaceFolder}/workdir/out.yuv",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "调试编码器",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/h264enc",
+            "args": [
+                "welsenc.cfg",
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}/testbin",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build"
+        }
+    ]
+}
