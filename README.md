@@ -1,5 +1,7 @@
 OpenH264
 ========
+![example workflow](https://github.com/eocene317/openh264-2.1.1/tree/master/.github/workflows/badge.svg)
+========
 OpenH264 is a codec library which supports H.264 encoding and decoding. It is suitable for use in real time applications such as WebRTC. See http://www.openh264.org/ for more details.
 
 Encoder Features
