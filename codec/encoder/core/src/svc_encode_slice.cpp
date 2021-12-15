@@ -401,7 +401,7 @@ void WelsSliceHeaderExtWrite (sWelsEncCtx* pCtx, SBitStringAux* pBs, SDqLayer* p
       pPps->uiSliceGroupMapType <= 5) {
     int32_t iNumBits;
     if (pPps->uiSliceGroupChangeRate) {
-      iNumBits = WELS_CEILLOG2 (1 + pPps->uiPicSizeInMapUnits / pPps->uiSliceGroupChangeRate);
+      iNumBits = WELS_LOG2 (1 + pPps->uiPicSizeInMapUnits / pPps->uiSliceGroupChangeRate);
       BsWriteBits (pBs, iNumBits, pSliceHeader->iSliceGroupChangeCycle);
     }
   }

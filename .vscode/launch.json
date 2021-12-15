@@ -10,11 +10,11 @@
             "request": "launch",
             "program": "${workspaceFolder}/h264dec",
             "args": [
-                "${workspaceFolder}/res/BA_MW_D_P_LOST.264",
-                "${workspaceFolder}/workdir/out.yuv",
+                "${workspaceFolder}/testbin/test.264",
+                "${workspaceFolder}/testbin/out.yuv",
             ],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/testbin",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -34,7 +34,7 @@
             "args": [
                 "welsenc.cfg",
             ],
-            "stopAtEntry": true,
+            "stopAtEntry": false,
             "cwd": "${workspaceFolder}/testbin",
             "environment": [],
             "externalConsole": false,

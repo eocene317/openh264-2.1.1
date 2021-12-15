@@ -600,7 +600,8 @@ int32_t WelsInitPps (SWelsPPS* pPps,
   pPps->iSpsId = pUsedSps->uiSpsId;
   pPps->bEntropyCodingModeFlag = kbEntropyCodingModeFlag;
 #if !defined(DISABLE_FMO_FEATURE)
-  pPps->uiNumSliceGroups = 2; //param->qos_param.sliceGroupCount;
+// 这里改多个sliceGroup解码会出问题？？？
+  pPps->uiNumSliceGroups = 1; //param->qos_param.sliceGroupCount;
   if (pPps->uiNumSliceGroups > 1) {
     pPps->uiSliceGroupMapType = 1; //param->qos_param.sliceGroupType;
     if (pPps->uiSliceGroupMapType == 0) {

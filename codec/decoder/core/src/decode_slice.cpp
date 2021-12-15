@@ -615,8 +615,7 @@ int32_t ParseIntra16x16Mode (PWelsDecoderContext pCtx, PWelsNeighAvail pNeighAva
   int32_t iCode;
   pCtx->pMap16x16NeighToSampleFunc (pNeighAvail, &uiNeighAvail);
 
-  if (CheckIntra16x16PredMode (uiNeighAvail,
-                               &pCurDqLayer->pIntraPredMode[iMbXy][7])) { //invalid iPredMode, must stop decoding
+  if (CheckIntra16x16PredMode (uiNeighAvail, &pCurDqLayer->pIntraPredMode[iMbXy][7])) { //invalid iPredMode, must stop decoding
     return GENERATE_ERROR_NO (ERR_LEVEL_MB_DATA, ERR_INFO_INVALID_I16x16_PRED_MODE);
   }
   if (pCtx->pSps->uiChromaFormatIdc == 0)
